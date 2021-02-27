@@ -72,7 +72,7 @@ function drawChoropleth(data) {
   // Create a map of county ID (fips) to state and county name
   const countyMap = Object.assign(
     new Map(ed.map((d) => [d.fips, `${d.area_name}, ${d.state}`])),
-    { title: "Unemployment rate (%)" }
+    {}
   );
 
   // Initialise tooltip
@@ -88,7 +88,7 @@ function drawChoropleth(data) {
   svg
     .append("g")
     .attr("transform", "translate(610,20)")
-    .append(() => legend({ color, title: data.title, width: 260 }))
+    .append(() => legend({ color, title: dataMap.title, width: 260 }))
     .attr("id", "legend");
 
   // Draw county data
