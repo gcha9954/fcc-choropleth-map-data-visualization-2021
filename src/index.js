@@ -66,7 +66,7 @@ function drawChoropleth(data) {
   // Create a map of county ID (fips) to % Bachelors or higher
   const dataMap = Object.assign(
     new Map(ed.map((d) => [d.fips, d.bachelorsOrHigher])),
-    { title: "Unemployment rate (%)" }
+    { title: "Attainment rate (%)" }
   );
 
   // Create a map of county ID (fips) to state and county name
